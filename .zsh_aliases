@@ -1,0 +1,28 @@
+# nav aliases
+alias code="vim -o \`fzf\`"
+alias cvim="cd ~/.config/nvim"
+alias comz="cd ~/.oh-my-zsh/"
+alias cspe="cd ~/.config/.spectrwm/"
+alias "."="cd .."
+alias ".."="cd ../.."
+alias "/"="cd"
+alias "?"="alias | fzf"
+alias ".his"="history | fzf"
+
+# git aliases
+alias gst="git status"
+alias gbr="git branch"
+alias gad="git add ."
+alias gco="git commit"
+alias gps="git push"
+alias gpl="git pull"
+alias gdi="git diff"
+alias glo="git log"
+alias gbl="git blame"
+
+function gul {
+  git add .
+  git commit -m "$1"
+  git push
+}
+
