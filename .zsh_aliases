@@ -10,15 +10,15 @@ alias "?"="alias | fzf"
 alias ".his"="history | fzf"
 
 # git aliases
-alias gst="git status"
+alias ggs="git status"
 alias gbr="git branch"
-alias gad="git add ."
-alias gco="git commit"
-alias gps="git push"
-alias gpl="git pull"
-alias gdi="git diff"
-alias glo="git log"
-alias gbl="git blame"
+alias gga="git add ."
+alias ggc="git commit"
+alias ggh="git push"
+alias ggl="git pull"
+alias ggd="git diff"
+alias ggo="git log"
+alias ggm="git blame"
 
 function gul {
   git add .
