@@ -20,7 +20,7 @@ alias ggd="git diff"
 alias ggo="git log"
 alias ggm="git blame"
 
-function gul {
+function ggu {
   git add .
   git commit -m "$1"
   git push
