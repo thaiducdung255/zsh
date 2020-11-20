@@ -9,6 +9,10 @@ alias "/"="cd"
 alias "?"="alias | fzf"
 alias ".his"="history | fzf"
 
+# fzf aliases
+alias e="fzf | xargs vi"
+alias f="fzf | xargs cd"
+
 # git aliases
 alias ggs="git status"
 alias gbr="git branch"
