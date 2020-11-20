@@ -148,7 +148,14 @@ export QT_IM_MODULE=ibus
 
 # enable fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-export FZF_DEFAULT_COMMAND='ag --hidden --ignore-dir .git --ignore-dir node_modules --ignore-dir .fnm --ignore-dir .vim -g ""'
+export FZF_DEFAULT_COMMAND='ag -g "" --hidden --ignore-case --skip-vcs-ignores \
+  --ignore ".git/*" \
+  --ignore "build/*" \
+  --ignore ".local/*" \
+  --ignore ".cache/*" \
+  --ignore "package-lock.json" \
+  --ignore ".idea/*" \
+  --ignore "node_modules/*"'
 
 # enable vi mode
 # set -o vi
