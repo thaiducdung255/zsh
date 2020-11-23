@@ -134,7 +134,7 @@ export QT_IM_MODULE=ibus
 export FZF_DEFAULT_OPTS="--ansi --preview-window 'right:60%' \
   --layout reverse \
   --margin=1,4 \
-  --preview 'batcat --color=always --style=header,grid --line-range :300 {}'"
+  --preview 'bat --color=always --style=header,grid --line-range :300 {}'"
 
 export FZF_DEFAULT_COMMAND='ag -g "" \
   --hidden --ignore-case \
