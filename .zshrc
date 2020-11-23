@@ -170,7 +170,3 @@ export EDITOR=vim
 # fnm
 export PATH=/home/df/.fnm:$PATH
 eval "`fnm env`"
-
-# fnm
-export PATH=/home/df/.fnm:$PATH
-eval "`fnm env`"
