@@ -11,6 +11,7 @@ fi
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 export GOPATH=$HOME/go
+export BAT_THEME="Dracula"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -98,24 +99,6 @@ unset __conda_setup
 # Standard plugins can be found in $ZSH/plugins/
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
-
-source $ZSH/oh-my-zsh.sh
-
-# User configuration
-source $HOME/.zsh_aliases
-
-# bindkey
-source $HOME/.zsh_custom_keys
-
-# zsh-auto-suggesttion config
-# ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="gray, underline"
-
-# fnm auto load
-export PATH=/home/df/.fnm:$PATH
-eval "`fnm env`"
-
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
@@ -148,14 +131,24 @@ export QT_IM_MODULE=ibus
 
 # enable fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-export FZF_DEFAULT_COMMAND='ag -g "" --hidden --ignore-case --skip-vcs-ignores \
+export FZF_DEFAULT_OPTS="--ansi --preview-window 'right:60%' \
+  --layout reverse \
+  --margin=1,4 \
+  --preview 'batcat --color=always --style=header,grid --line-range :300 {}'"
+
+export FZF_DEFAULT_COMMAND='ag -g "" \
+  --hidden --ignore-case \
+  --skip-vcs-ignores \
   --ignore ".git/*" \
   --ignore "build/*" \
   --ignore ".local/*" \
   --ignore ".cache/*" \
+  --ignore ".vim/*" \
   --ignore "package-lock.json" \
   --ignore ".idea/*" \
   --ignore "node_modules/*"'
+export FZF_CONTROL_T_COMMAND='fd . $HOME'
+export FZF_ALT_C_COMMAND='fdfind -t d . $HOME'
 
 # enable vi mode
 # set -o vi
@@ -166,6 +159,33 @@ autoload -U compinit && compinit -u
 
 # set default editor to vim
 export EDITOR=vim
+
+# Add wisely, as too many plugins slow down shell startup.
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
+
+source $ZSH/oh-my-zsh.sh
+
+# active zle
+example-zle-widget(){
+  # Adds to the built-in LBUFFER variable the word "HEY"
+  LBUFFER="${LBUFFER}HEY"
+}
+zle -N example-zle-widget
+bindkey '^E' example-zle-widget
+
+# User configuration
+source $HOME/.zsh_aliases
+
+# bindkey
+source $HOME/.zsh_custom_keys
+
+# zsh-auto-suggesttion config
+# ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="gray, underline"
+
+# fnm auto load
+export PATH=/home/df/.fnm:$PATH
+eval "`fnm env`"
+
 
 # fnm
 export PATH=/home/df/.fnm:$PATH
