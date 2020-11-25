@@ -3,8 +3,8 @@ bindkey ":" autosuggest-accept
 bindkey ";" autosuggest-execute
 
 # text-modifier keys
-bindkey '^h' backward-delete-word
-bindkey '^l' forward-delete-word
+# bindkey '^h' backward-delete-word
+# bindkey '^l' forward-delete-word
 
 bindkey '^j' backward-word
 bindkey '^k' forward-word
