@@ -1,2 +1,20 @@
-bindkey "^['" autosuggest-accept
+# zsh plugin auto completetion
+bindkey ":" autosuggest-accept
 bindkey ";" autosuggest-execute
+
+# text-modifier keys
+bindkey '^h' backward-delete-word
+bindkey '^l' forward-delete-word
+
+bindkey '^j' backward-word
+bindkey '^k' forward-word
+
+bindkey '\ec' kill-line
+
+# fzf custom keys
+fzf-cd(){
+  LBUFFER="${LBUFFER}cd $(fd --type d --hidden . --ignore-case \
+    '/home/df' | fzf)"
+}
+zle -N fzf-cd
+bindkey '\e ' fzf-cd

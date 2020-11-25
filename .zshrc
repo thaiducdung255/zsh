@@ -146,6 +146,18 @@ export FZF_DEFAULT_COMMAND='ag -g "" \
   --ignore ".vim/*" \
   --ignore "package-lock.json" \
   --ignore ".idea/*" \
+  --ignore "skypeforlinux/*" \
+  --ignore "MongoDB Compass/*" \
+  --ignore "libreoffice/*" \
+  --ignore "Rambox/*" \
+  --ignore "Postman/*" \
+  --ignore ".npm/*" \
+  --ignore ".fnm/*" \
+  --ignore "BraveSoftware" \
+  --ignore ".gem" \
+  --ignore "autojump" \
+  --ignore "node_modules/*" \
+  --ignore ".oh-my-zsh/plugins" \
   --ignore "node_modules/*"'
 export FZF_CONTROL_T_COMMAND='fd . $HOME'
 export FZF_ALT_C_COMMAND='fdfind -t d . $HOME'
