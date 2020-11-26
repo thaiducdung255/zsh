@@ -13,7 +13,7 @@ bindkey '\ec' kill-line
 
 # fzf custom keys
 
-# fzf-cd
+# fzf auto cd
 fzf-cd(){
   LBUFFER="${LBUFFER}cd $(fd --type d --hidden . --ignore-case \
     --exclude node_modules \
