@@ -31,6 +31,7 @@ fzf-cd(){
     --exclude Rambox \
     --exclude .git \
     --exclude .vim \
+    --exclude .esy \
     '/home/df' | fzf --preview '')"
 }
 zle -N fzf-cd
@@ -54,6 +55,7 @@ LBUFFER="${LBUFFER} $(fd --type f --hidden . --ignore-case \
     --exclude Rambox \
     --exclude .git \
     --exclude .vim \
+    --exclude .esy \
     '/home/df' | fzf --preview '')"
 }
 zle -N fzf-file
