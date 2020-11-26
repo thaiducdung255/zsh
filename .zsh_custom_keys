@@ -12,6 +12,8 @@ bindkey '^k' forward-word
 bindkey '\ec' kill-line
 
 # fzf custom keys
+
+# fzf auto cd
 fzf-cd(){
   LBUFFER="${LBUFFER}cd $(fd --type d --hidden . --ignore-case \
     --exclude node_modules \
@@ -33,3 +35,26 @@ fzf-cd(){
 }
 zle -N fzf-cd
 bindkey '\e ' fzf-cd
+
+# fzf file nav
+fzf-file(){
+LBUFFER="${LBUFFER} $(fd --type f --hidden . --ignore-case \
+    --exclude node_modules \
+    --exclude .fnm \
+    --exclude .npm \
+    --exclude BraveSoftware \
+    --exclude .cache \
+    --exclude .autojump \
+    --exclude .node-gyp \
+    --exclude .gem \
+    --exclude .gnome \
+    --exclude skypeforlinux \
+    --exclude Postman \
+    --exclude .local \
+    --exclude Rambox \
+    --exclude .git \
+    --exclude .vim \
+    '/home/df' | fzf --preview '')"
+}
+zle -N fzf-file
+bindkey '\ef' fzf-file
