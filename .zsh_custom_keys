@@ -13,6 +13,14 @@ bindkey '\ec' kill-line
 
 # fzf custom keys
 
+# fzf edit file
+fzf-vi() {
+  LBUFFER="fzf | xargs vi"
+  zle accept-line
+}
+zle -N fzf-vi
+bindkey '\e;' fzf-vi
+
 # fzf auto cd
 fzf-cd(){
   LBUFFER="${LBUFFER}cd $(fd --type d --hidden . --ignore-case \
@@ -36,6 +44,7 @@ fzf-cd(){
     --exclude libreoffice \
     --exclude google-chrome \
     '/home/df' | fzf --preview '')"
+  zle accept-line
 }
 zle -N fzf-cd
 bindkey '\e ' fzf-cd

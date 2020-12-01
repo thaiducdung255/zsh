@@ -9,9 +9,6 @@ alias "/"="cd"
 alias "?"="alias | fzf"
 alias ".his"="history | fzf"
 
-# fzf aliases
-alias vf="fzf | xargs vi"
-
 # git aliases
 alias ggs="git status"
 alias gbr="git branch"
@@ -28,4 +25,3 @@ function ggu {
   git commit -m "$1"
   git push
 }
-
