@@ -21,11 +21,6 @@ export BAT_THEME="Dracula"
 # ZSH_THEME="robbyrussell"
 ZSH_THEME="powerlevel10k/powerlevel10k"
 typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
-# typeset -g POWERLEVEL9K_INSTANT_PROMP=off
-# POWERLEVEL9K_DISABLE_RPROMPT=true
-# POWERLEVEL9K_PROMPT_ON_NEWLINE=true
-# POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="▶"
-# POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX=""
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by ‘conda init’ !!
@@ -117,12 +112,10 @@ unset __conda_setup
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 #
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
 
 # enable ibus daemon
 export GTK_IM_MODULE=ibus
@@ -166,8 +159,7 @@ export FZF_ALT_C_COMMAND='fdfind -t d . $HOME'
 # set -o vi
 
 # enable autojump
-[[ -s /home/df/.autojump/etc/profile.d/autojump.sh ]] && source /home/df/.autojump/etc/profile.d/autojump.sh
-autoload -U compinit && compinit -u
+[[ -s /root/.autojump/etc/profile.d/autojump.sh ]] && source /root/.autojump/etc/profile.d/autojump.sh
 
 # set default editor to vim
 export EDITOR=vim
@@ -191,13 +183,9 @@ source $HOME/.zsh_aliases
 # bindkey
 source $HOME/.zsh_custom_keys
 
-# zsh-auto-suggesttion config
-# ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="gray, underline"
-
 # fnm auto load
 export PATH=/home/df/.fnm:$PATH
 eval "`fnm env`"
-
 
 # fnm
 export PATH=/home/df/.fnm:$PATH
