@@ -6,8 +6,8 @@ alias cspe="cd ~/.config/.spectrwm/"
 alias "."="cd .."
 alias ".."="cd ../.."
 alias "/"="cd"
-alias "?"="alias | fzf"
-alias ".his"="history | fzf"
+alias "?"="alias | fzf --preview=''"
+alias "h"="history | fzf --preview=''"
 
 # git aliases
 alias ggs="git status"
