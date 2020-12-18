@@ -1,5 +1,5 @@
 # zsh plugin auto completetion
-bindkey "^l" autosuggest-accept
+bindkey "\el" autosuggest-accept
 bindkey ";" autosuggest-execute
 
 # text-modifier keys
