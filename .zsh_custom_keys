@@ -1,10 +1,9 @@
 # zsh plugin auto completetion
-bindkey "\e" autosuggest-accept
+bindkey "^l" autosuggest-accept
 bindkey ";" autosuggest-execute
 
 # text-modifier keys
-# bindkey '^h' backward-delete-word
-# bindkey '^l' forward-delete-word
+bindkey '^h' backward-delete-word
 
 bindkey '^j' backward-word
 bindkey '^k' forward-word
