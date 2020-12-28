@@ -159,7 +159,8 @@ export FZF_ALT_C_COMMAND='fdfind -t d . $HOME'
 # set -o vi
 
 # enable autojump
-[[ -s /root/.autojump/etc/profile.d/autojump.sh ]] && source /root/.autojump/etc/profile.d/autojump.sh
+[[ -s /home/df/.autojump/etc/profile.d/autojump.sh ]] && source /home/df/.autojump/etc/profile.d/autojump.sh
+autoload -U compinit && compinit -u
 
 # set default editor to vim
 export EDITOR=vim
