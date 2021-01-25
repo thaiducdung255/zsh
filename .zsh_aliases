@@ -20,6 +20,7 @@ alias ggd="git diff"
 alias ggo="git log"
 alias ggm="git blame"
 
+alias fan="sudo bash ~/.config/qtile/.init-scripts/fan-speed.sh"
 function ggu {
   git add .
   git commit -m "$1"
