@@ -1,14 +1,14 @@
 # zsh plugin auto completetion
 bindkey "\el" autosuggest-accept
-bindkey "  " autosuggest-execute
+bindkey "." autosuggest-execute
 
 # text-modifier keys
-bindkey '^h' backward-delete-word
+bindkey "^h" backward-delete-word
 
-bindkey '^j' backward-word
-bindkey '^k' forward-word
+bindkey "^j" backward-word
+bindkey "^k" forward-word
 
-bindkey '\ec' kill-line
+bindkey "^q" kill-line
 
 # fzf custom keys
 
@@ -48,7 +48,7 @@ fzf-vi() {
   zle accept-line
 }
 zle -N fzf-vi
-bindkey '\e;' fzf-vi
+bindkey "\e;" fzf-vi
 
 # fzf auto cd
 fzf-cd(){
@@ -87,7 +87,7 @@ fzf-cd(){
   zle accept-line
 }
 zle -N fzf-cd
-bindkey '\e ' fzf-cd
+bindkey "\e " fzf-cd
 
 # fzf-get file's path
 fzf-file(){
@@ -125,7 +125,7 @@ fzf-file(){
     '/home/df' | fzf)"
 }
 zle -N fzf-file
-bindkey '\ef' fzf-file
+bindkey "\ef" fzf-file
 
 # fzf-get dir's path
 fzf-dir(){
@@ -163,4 +163,4 @@ fzf-dir(){
     '/home/df' | fzf --preview '')"
 }
 zle -N fzf-dir
-bindkey '\ed' fzf-dir
+bindkey "\ed" fzf-dir
